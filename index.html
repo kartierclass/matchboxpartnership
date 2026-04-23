@@ -33,25 +33,36 @@
     .sec-title { font-family: 'Bebas Neue', sans-serif; font-size: 34px; color: #fff; letter-spacing: 0.02em; margin-bottom: 1.8rem; }
 
     /* TURF IMAGES */
-    .img-grid {
+   .img-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 4px;
   border-radius: 4px;
   overflow: hidden;
 }
 .img-slot {
-  aspect-ratio: 16/9;
+  aspect-ratio: 4/3;
   overflow: hidden;
   background: #111;
+  position: relative;
 }
 .img-slot img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  filter: brightness(0.75);
+  filter: brightness(0.65);
   transition: filter 0.3s;
+}
+.img-slot img:hover { filter: brightness(0.9); }
+.img-label {
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  color: #fff;
 }
 
 
@@ -107,6 +118,8 @@
       .cta-btns { flex-direction: column; }
       .btn-g, .btn-d { text-align: center; }
       .footer { flex-direction: column; align-items: flex-start; }
+      .img-grid { grid-template-columns: 1fr; }
+      .img-slot { aspect-ratio: 16/9; }
     }
   </style>
 </head>
@@ -129,16 +142,24 @@
     </div>
 
     <!-- VENUES -->
-    <div class="section">
-      <div class="sec-eyebrow">The venues</div>
-      <div class="sec-title">Where your brand shows up</div>
-      <div class="img-grid">
-       <div class="img-slot"><img src="https://matchboxmysore.in/turf1.jpg" alt="Football turf" /></div>
-       <div class="img-slot"><img src="https://matchboxmysore.in/turf3.jpg" alt="Pickleball court" /></div>
-       <div class="img-slot"><img src="https://matchboxmysore.in/turf2.jpg" alt="Box cricket" /></div>
-       <div class="img-slot"><img src="https://matchboxmysore.in/hebballocation.jpg" alt="Hebbal centre" /></div>
-      </div>
+<div class="section">
+  <div class="sec-eyebrow">The venues</div>
+  <div class="sec-title">Our facilities</div>
+  <div class="img-grid">
+    <div class="img-slot">
+      <img src="https://matchboxmysore.in/hebballocation.jpg" alt="Hebbal" />
+      <div class="img-label">Hebbal</div>
     </div>
+    <div class="img-slot">
+      <img src="https://matchboxmysore.in/vijaynagarlocation.jpg" alt="Vijayanagar" />
+      <div class="img-label">Vijayanagar</div>
+    </div>
+    <div class="img-slot">
+      <img src="https://matchboxmysore.in/yadavgirilocation.jpg" alt="Yadavgiri" />
+      <div class="img-label">Yadavgiri</div>
+    </div>
+  </div>
+</div>
 
 
     <!-- DELIVERABLES -->
